@@ -1,0 +1,330 @@
+/* ==========================================================
+   HOJA DE ESTILOS CSS - ViVe
+   Tema: Tonos Cálidos y Frutales (Naranja, Mango, Magenta)
+   ========================================================== */
+
+/* 1. RESET Y VARIABLES DE COLOR CÁLIDAS */
+:root {
+    --magenta-frutal: #8b1e5a;
+    --magenta-vibrante: #a61c5c;
+    --naranja-vibrante: #f36b21;
+    --naranja-calido: #e85d04;
+    --amarillo-mango: #ffaa00;
+    --durazno-claro: #ffe5d9;
+    --fondo-calido: #fff8f0;
+    --texto-oscuro: #2d1810;
+    --blanco: #ffffff;
+    --sombra-suave: 0 4px 15px rgba(139, 30, 90, 0.08);
+    --sombra-fuerte: 0 8px 25px rgba(243, 107, 33, 0.2);
+    --transicion: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--fondo-calido);
+    color: var(--texto-oscuro);
+    line-height: 1.6;
+}
+
+/* 2. ENCABEZADO (HEADER) */
+.header {
+    background-color: var(--magenta-frutal);
+    color: var(--blanco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--sombra-fuerte);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    border-radius: 50%;
+    background-color: var(--blanco);
+    padding: 3px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-name {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--amarillo-mango);
+    line-height: 1.1;
+}
+
+.brand-slogan {
+    font-size: 0.75rem;
+    color: var(--durazno-claro);
+    font-style: italic;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: var(--transicion);
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+.nav a:hover {
+    background-color: var(--naranja-vibrante);
+    color: var(--blanco);
+}
+
+/* 3. PRESENTACIÓN PRINCIPAL (HERO) */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 8%;
+    background: linear-gradient(135deg, var(--naranja-calido) 0%, var(--magenta-frutal) 100%);
+    color: var(--blanco);
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    color: var(--amarillo-mango);
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.8rem;
+    opacity: 0.95;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--amarillo-mango);
+    color: var(--magenta-frutal);
+    padding: 12px 28px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: var(--transicion);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+    background-color: var(--blanco);
+    color: var(--naranja-calido);
+    transform: translateY(-3px);
+}
+
+.hero-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-img {
+    width: 100%;
+    max-width: 480px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 4px solid var(--amarillo-mango);
+    box-shadow: var(--sombra-fuerte);
+}
+
+/* 4. ESTILOS GENERALES DE SECCIONES */
+.section-container {
+    padding: 4rem 8%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    color: var(--magenta-frutal);
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    color: #6d4c41;
+    margin-bottom: 2.5rem;
+}
+
+/* 5. SECCIÓN 1: 4 CARDS (GRID) */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background-color: var(--blanco);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--sombra-suave);
+    transition: var(--transicion);
+    border: 1px solid rgba(243, 107, 33, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--sombra-fuerte);
+}
+
+.card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1.5rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-body h3 {
+    color: var(--naranja-calido);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-body p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* 6. SECCIÓN 2: BENEFICIOS */
+.beneficios-section {
+    background-color: var(--durazno-claro);
+    border-radius: 30px;
+    margin: 2rem 8%;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.benefit-item {
+    background-color: var(--blanco);
+    padding: 2rem 1.2rem;
+    border-radius: 15px;
+    box-shadow: var(--sombra-suave);
+    transition: var(--transicion);
+}
+
+.benefit-item:hover {
+    border-top: 4px solid var(--naranja-vibrante);
+}
+
+.benefit-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.benefit-item h3 {
+    color: var(--magenta-frutal);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.benefit-item p {
+    font-size: 0.88rem;
+    color: #666;
+}
+
+/* 7. SECCIÓN 3: GALERÍA (3 IMÁGENES) */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: var(--sombra-suave);
+    height: 230px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transicion);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+/* 8. PIE DE PÁGINA (FOOTER) */
+.footer {
+    background-color: var(--magenta-frutal);
+    color: var(--blanco);
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+    border-top: 4px solid var(--amarillo-mango);
+}
+
+.footer-content p {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+}
+
+.footer-content strong {
+    color: var(--amarillo-mango);
+}
+
+/* 9. ADAPTABILIDAD RESPONSIVA PARA PANTALLAS PEQUEÑAS */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 2.5rem 5%;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
